@@ -16,7 +16,7 @@ CREATE TABLE t_board(
     hit NUMBER DEFAULT 0,
     memberid VARCHAR2(20) NOT NULL,
     CONSTRAINT FK_MemberBoard FOREIGN KEY(memberid)
-    REFERENCES t_member(memberid) 
+    REFERENCES t_member(memberid) ON DELETE CASCADE
 );
 -- 글번호, 글제목, 글내용, 작성일, 수정일, 조회수, 아이디(외래키)
 -- 자동 순번(SEQUENCE)
