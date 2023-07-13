@@ -66,10 +66,17 @@ FROM (SELECT ROWNUM rn, board.*
             FROM(SELECT * FROM t_board ORDER BY bnum DESC) board)
 WHERE rn >= 1 AND RN <= 10;  --별칭(RN)을 사용해야 가능
 
+
+
+
+
+
+
+
 -- 총 행의 수
 SELECT COUNT(*) FROM t_board;
 
-
-
 DROP TABLE t_board;  -- board 테이블 삭제
 DROP SEQUENCE b_seq; -- 시퀀스 삭제
+
+
